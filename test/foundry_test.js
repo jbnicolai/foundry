@@ -125,6 +125,18 @@ describe('Foundry.getReleaseLibs', function () {
   });
 });
 
+describe.skip('foundry loading a set of node_modules', function () {
+  it('only loads the ones tagged with a "foundry-release" keyword', function () {
+
+  });
+});
+
+describe.skip('foundry releasing an echoing plugin', function () {
+  it('loads and releases that plugin', function () {
+
+  });
+});
+
 // DEV: This is not a required test but one for peace of mind regarding usability messaing
 describe('foundry using a package with a bad `specVersion`', function () {
   before(function releaseWithBadVersion (done) {
