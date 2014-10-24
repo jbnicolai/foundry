@@ -30,7 +30,7 @@
   },
   "scripts": {
     "link-bash-completion": "sudo ln -s $PWD/bin/completion/foundry /etc/bash_completion.d/foundry",
-    "test": "(test \"$VAGRANT\" = \"true\" || test \"$TRAVIS\" = \"true\" || (echo \"Tests must be run in enclosed environment (e.g. Vagrant, Travis) to prevent accidental publishes\n\" 1>&2 && exit 1)) && mocha --recursive"
+    "test": "(test \"$VAGRANT\" = \"true\" || test \"$TRAVIS\" = \"true\" || (echo \"Tests must be run in enclosed environment (e.g. Vagrant, Travis) to prevent accidental publishes\n\" 1>&2 && exit 1)) && mocha --bail"
   },
   "dependencies": {
     "async": "~0.2.9",
@@ -49,7 +49,8 @@
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-watch": "~0.4.0",
     "mocha": "~1.11.0",
-    "shell-quote": "~1.4.2"
+    "shell-quote": "~1.4.2",
+    "suppose": "~0.3.0"
   },
   "keywords": [
     "release",
