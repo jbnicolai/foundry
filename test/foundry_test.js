@@ -132,14 +132,18 @@ describe.skip('foundry releasing an echoing plugin', function () {
   });
 });
 
+describe.skip('foundry releasing an echoing plugin', function () {
+  it('prompts the user before releasing', function () {
+
+  });
+});
+
 // DEV: This is not a required test but one for peace of mind regarding usability messaing
 describe('foundry using a package with a bad `specVersion`', function () {
   before(function releaseWithBadVersion (done) {
-    var cmd = quote(['node', __dirname + '/../bin/foundry', 'release',
+    var cmd = quote(['node', __dirname + '/../bin/foundry', 'release', '-y',
       '--plugin-dir', __dirname + '/test-files/plugins-unsupported-version', '1.0.0']);
     var that = this;
-    console.log(cmd);
-    // TODO: Create a foundry-release-plugin which always bails out unless an env var is defined or maybe a confirmation prompt
     _exec(cmd, function handleExec (err, stdout, stderr) {
       // Save err, stdout, stderr and callback
       that.err = err;
