@@ -138,6 +138,12 @@ describe.skip('foundry releasing an echoing plugin', function () {
   });
 });
 
+// TODO: Doubling back on if we really need a prompt. It is to solve my use case of having a global
+// TODO: Instead, I should design a plugin that satisfies my need with a confirmation prompt
+// TODO: And we should move to "local" node modules in next major
+
+// TOOD: But if we abandon ship, don't lose progress on other things like fixing `plugins` command
+
 // DEV: This is not a required test but one for peace of mind regarding usability messaing
 describe('foundry using a package with a bad `specVersion`', function () {
   before(function releaseWithBadVersion (done) {
